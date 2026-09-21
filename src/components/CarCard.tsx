@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Car } from '../data/carsData';
-import { StandardCarCanvas } from './StandardCarCanvas';
+import { ThreeCarViewer } from './ThreeCarViewer';
 import { useLanguage } from '../context/LanguageContext';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -31,9 +31,9 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onSelect }) => {
         </span>
       </div>
 
-      {/* Center Section: Circular Platform & Vehicle Canvas */}
-      <div className="relative z-10 my-4 transform group-hover:-translate-y-2 group-hover:scale-105 transition-transform duration-300">
-        <StandardCarCanvas car={car} rotationAngle={30} />
+      {/* Center Section: 3D Turntable & Realistic Car Viewer */}
+      <div className="relative z-10 my-2 transform group-hover:-translate-y-1 transition-transform duration-300">
+        <ThreeCarViewer car={car} />
       </div>
 
       {/* Bottom Section: Vehicle Name & Minimal View Details CTA */}
