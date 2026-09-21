@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Car } from '../data/carsData';
-import { CarViewer } from './CarViewer';
+import { ThreeCarViewer } from './ThreeCarViewer';
 import { useLanguage } from '../context/LanguageContext';
 import { X, ArrowRight, ArrowLeft, MessageSquare, Shield, CheckCircle2, Zap, Fuel, Users, Calendar, Gauge } from 'lucide-react';
 
@@ -33,7 +33,7 @@ export const VehicleDetailExperience: React.FC<VehicleDetailExperienceProps> = (
 
         <div className="flex items-center gap-3">
           <span className="text-xs font-mono text-zinc-400 hidden sm:inline">
-            AQWARA AUTOMOTIVE PLATFORM
+            AQWARA 3D AUTOMOTIVE SHOWROOM
           </span>
           <button
             onClick={onClose}
@@ -45,13 +45,13 @@ export const VehicleDetailExperience: React.FC<VehicleDetailExperienceProps> = (
         </div>
       </div>
 
-      {/* Main Body Grid: Large Interactive Presentation Platform (Top/Left) + Specifications (Right/Bottom) */}
+      {/* Main Body Grid: 3D Showroom Platform (Left/Top) + Technical Specs (Right/Bottom) */}
       <div className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
-        {/* LEFT / TOP: Interactive 360 Platform Presentation Area */}
-        <div className="lg:col-span-7 bg-zinc-900/60 border border-zinc-800/80 rounded-3xl p-6 lg:p-8 flex flex-col items-center justify-center relative shadow-2xl">
+        {/* LEFT / TOP: Interactive 3D Turntable Showroom Platform */}
+        <div className="lg:col-span-7 bg-zinc-900/60 border border-zinc-800/80 rounded-3xl p-4 lg:p-8 flex flex-col items-center justify-center relative shadow-2xl">
           <div className="w-full">
-            <CarViewer car={car} className="w-full" />
+            <ThreeCarViewer car={car} className="w-full" />
           </div>
 
           <div className="w-full mt-6 pt-6 border-t border-zinc-800/80 flex flex-wrap items-center justify-between text-xs text-zinc-400 gap-4">

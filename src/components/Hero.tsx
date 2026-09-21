@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { ArrowLeft, ArrowRight, ShieldCheck, Sparkles, Compass } from 'lucide-react';
-import { StandardCarCanvas } from './StandardCarCanvas';
+import { ThreeCarViewer } from './ThreeCarViewer';
 import { carsData } from '../data/carsData';
 
 interface HeroProps {
@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreNew, onExploreRental }) => 
   const { t, dir } = useLanguage();
   const ArrowIcon = dir === 'rtl' ? ArrowLeft : ArrowRight;
 
-  // Showcase vehicle for Hero background/platform
+  // Showcase vehicle for Hero 3D turntable platform
   const heroCar = carsData[0];
 
   return (
@@ -95,10 +95,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreNew, onExploreRental }) => 
             {/* Architectural Frame Box */}
             <div className="w-full relative bg-gradient-to-b from-zinc-900/90 to-zinc-950 p-6 rounded-2xl border border-zinc-800 shadow-2xl">
               <div className="absolute top-3 right-4 text-[10px] font-mono text-zinc-500 tracking-wider uppercase">
-                SPOTLIGHT PLATFORM
+                3D SHOWROOM PLATFORM
               </div>
 
-              <StandardCarCanvas car={heroCar} rotationAngle={45} className="py-4" />
+              <ThreeCarViewer car={heroCar} className="py-2" />
 
               <div className="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
                 <div>
